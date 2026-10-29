@@ -22,7 +22,8 @@
 
 .flexRow--cyber-brands {
   width: 100%;
-  margin-top: 40px !important;
+  padding-top: 40px !important;
+  margin-bottom: 40px !important;
 }
 
 .flexRowContent--cyber-brands {
@@ -48,12 +49,21 @@
   justify-content: center;
 }
 
-/* Imagen de cada marca */
+/* Imagen de cada marca - altura fija uniforme */
 .imageElement--cyber-brand {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  display: block !important;
+  width: 100% !important;
+  height: 200px !important;
+  max-height: 200px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  margin: 0 auto !important;
+}
+
+/* TOPPER específicamente - misma altura */
+.imageElement--cyber-brand-topper {
+  height: 200px !important;
+  max-height: 200px !important;
 }
 
 /* ==========================================
@@ -68,6 +78,16 @@
   .flexCol--cyber-brand-col {
     height: 120px;
     min-height: 120px;
+  }
+
+  .imageElement--cyber-brand {
+    height: 100px !important;
+    max-height: 100px !important;
+  }
+
+  .imageElement--cyber-brand-topper {
+    height: 100px !important;
+    max-height: 100px !important;
   }
 }
 
@@ -84,6 +104,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px !important;
 }
 
 .flexRowContent--cyber-strip {
