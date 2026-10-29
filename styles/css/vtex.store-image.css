@@ -1,0 +1,21 @@
+.imageElement--cyber-brand {
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(176, 38, 255, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.imageElement--cyber-brand:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(255, 138, 0, 0.5);
+}
+
+.imageElement--cyber-side {
+  border-radius: 18px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.imageElement--cyber-hero {
+  display: block;
+}

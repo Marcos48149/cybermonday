@@ -1,0 +1,456 @@
+{
+  "store.custom#cm26-cybermonday2": {
+    "blocks": ["flex-layout.row#cm26-cyber-page"]
+  },
+
+  "flex-layout.row#cm26-cyber-page": {
+    "props": {
+      "blockClass": "cyber-page",
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#cm26-cyber-page"]
+  },
+
+  "flex-layout.col#cm26-cyber-page": {
+    "props": { "blockClass": "cyber-page", "width": "100%" },
+    "children": [
+      "list-context.image-list#cm26-cyber-promo-carousel",
+      "responsive-layout.desktop#cm26-cyber-hero",
+      "responsive-layout.mobile#cm26-cyber-hero",
+      /*"flex-layout.row#cm26-cyber-countdown",*/
+      "flex-layout.row#cm26-cyber-banner-strip",
+      "flex-layout.row#cm26-cyber-brands",
+      "flex-layout.row#cm26-cyber-title-1",
+      "flex-layout.row#cm26-sec-1",
+      "flex-layout.row#cm26-cyber-title-2",
+      "flex-layout.row#cm26-sec-2",
+      "flex-layout.row#cm26-cyber-promos",
+      "flex-layout.row#cm26-cyber-title-3",
+      "flex-layout.row#cm26-sec-3",
+      "link#cm26-cyber-final-banners-link"
+    ]
+  },
+
+  "responsive-layout.desktop#cm26-cyber-hero": {
+    "children": ["image#cm26-cyber-hero-desktop"]
+  },
+  "responsive-layout.mobile#cm26-cyber-hero": {
+    "children": ["image#cm26-cyber-hero-mobile"]
+  },
+  "image#cm26-cyber-hero-desktop": {
+    "props": {
+      "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/663219b7-fbec-41d7-81df-4720b46a8d77___373fb81c9fade5c589643290f953b8c9.gif",
+      "alt": "Cyber Show",
+      "maxWidth": "100%",
+      "blockClass": "cyber-hero-full"
+    }
+  },
+  "image#cm26-cyber-hero-mobile": {
+    "props": {
+      "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/663219b7-fbec-41d7-81df-4720b46a8d77___373fb81c9fade5c589643290f953b8c9.gif",
+      "alt": "Cyber Show",
+      "maxWidth": "100%",
+      "blockClass": "cyber-hero-full"
+    }
+  },
+
+  /* --- CONTADOR --- 
+  "flex-layout.row#cm26-cyber-countdown": {
+    "props": {
+      "blockClass": "cyber-countdown",
+      "horizontalAlign": "center",
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": ["countdown#cm26-cyber-countdown"]
+  },
+
+  "countdown#cm26-cyber-countdown": {
+    "props": {
+      "blockClass": "cyber",
+      "targetDate": "2026-12-01T00:00:00",
+      "title": "¡FALTAN PARA CYBERMONDAY!",
+      "showTitle": true,
+      "showDays": true,
+      "showHours": true,
+      "showMinutes": true,
+      "showSeconds": true
+    }
+  },*/
+
+  /* --- FRANJA DE TEXTO (ARRANCAMOS CON CYBERMONDAY) --- */
+  "flex-layout.row#cm26-cyber-banner-strip": {
+    "props": {
+      "blockClass": "cyber-strip",
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "verticalAlign": "middle",
+      "preserveLayoutOnMobile": true
+    },
+    "children": ["rich-text#cm26-cyber-strip"]
+  },
+  "rich-text#cm26-cyber-strip": {
+    "props": {
+      "text": "¡ARRANCAMOS CON CYBERMONDAY! ⚡ FALTAN POCAS HORAS",
+      "textAlignment": "CENTER",
+      "blockClass": "cyber-strip"
+    }
+  },
+
+  /* --- 3 BANNERS DE MARCA --- */
+  "flex-layout.row#cm26-cyber-brands": {
+    "props": {
+      "blockClass": "cyber-brands",
+      "horizontalAlign": "center",
+      "preserveLayoutOnMobile": true,
+      "colGap": 4,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#cm26-brand-1",
+      "flex-layout.col#cm26-brand-2",
+      "flex-layout.col#cm26-brand-3"
+    ]
+  },
+  "flex-layout.col#cm26-brand-1": {
+    "props": { "width": "33.33%", "horizontalAlign": "center", "blockClass": "cyber-brand-col" },
+    "children": ["image#cm26-brand-1"]
+  },
+  "flex-layout.col#cm26-brand-2": {
+    "props": { "width": "33.33%", "horizontalAlign": "center", "blockClass": "cyber-brand-col" },
+    "children": ["image#cm26-brand-2"]
+  },
+  "flex-layout.col#cm26-brand-3": {
+    "props": { "width": "33.33%", "horizontalAlign": "center", "blockClass": "cyber-brand-col" },
+    "children": ["image#cm26-brand-3"]
+  },
+  "image#cm26-brand-1": {
+    "props": {
+      "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/1921c09a-cfa5-4bbc-8ea3-80561442e680___5daff515be46150a097eaffbba25fc38.gif",
+      "alt": "FILA",
+      "link": { "url": "" },
+      "maxWidth": "100%",
+      "blockClass": ["cyber-brand", "cyber-brand-topper"]
+    }
+  },
+  "image#cm26-brand-2": {
+    "props": {
+      "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/732f1ab1-beff-47a2-92ef-46cccd56b166___29e7df461bd9b2111fe249088b6e6038.gif",
+      "alt": "ON",
+      "link": { "url": "" },
+      "maxWidth": "100%",
+      "blockClass": ["cyber-brand", "cyber-brand-topper"]
+    }
+  },
+  "image#cm26-brand-3": {
+    "props": {
+      "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/4fddac44-e913-4767-962c-091c50613440___19f69a2c10c3bad42f52502f196c79c6.gif",
+      "alt": "TOPPER",
+      "link": { "url": "" },
+      "maxWidth": "100%",
+      "blockClass": ["cyber-brand", "cyber-brand-topper"]
+    }
+  },
+
+
+
+  /* --- CARRUSEL DE PROMOS (ARRIBA DEL HERO) --- */
+  "list-context.image-list#cm26-cyber-promo-carousel": {
+    "children": ["slider-layout#cm26-cyber-promo-carousel"],
+    "props": {
+      "height": 100,
+      "images": [
+        { "image": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/6ae7f218-8ce5-4f46-ac5f-aba1e3658de7___0bf673972e8422d32bc179ecfe5626b0.png", "description": "Promo Cyber Monday 1" },
+        { "image": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/262739f3-ec9f-4efa-9d88-cf955be2ad7c___6cfd5243b4fcac4c58001e0ef75e9a8b.png", "description": "Promo Cyber Monday 2" }
+      ]
+    }
+  },
+  "slider-layout#cm26-cyber-promo-carousel": {
+    "props": {
+      "itemsPerPage": { "desktop": 1, "tablet": 1, "phone": 1 },
+      "infinite": true
+    }
+  },
+
+  /* --- TÍTULOS DE CARRUSEL (MISMO ESTILO QUE LA FRANJA DE ARRANCAMOS) --- */
+  "flex-layout.row#cm26-cyber-title-1": {
+    "props": {
+      "blockClass": ["cyber-strip", "cyber-strip-title"],
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "verticalAlign": "middle",
+      "preserveLayoutOnMobile": true
+    },
+    "children": ["rich-text#cm26-cyber-title-1"]
+  },
+  "rich-text#cm26-cyber-title-1": {
+    "props": {
+      "text": "¡MEGA OFERTAS!",
+      "textAlignment": "CENTER",
+      "blockClass": "cyber-strip"
+    }
+  },
+  "flex-layout.row#cm26-cyber-title-2": {
+    "props": {
+      "blockClass": ["cyber-strip", "cyber-strip-title"],
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "verticalAlign": "middle",
+      "preserveLayoutOnMobile": true
+    },
+    "children": ["rich-text#cm26-cyber-title-2"]
+  },
+  "rich-text#cm26-cyber-title-2": {
+    "props": {
+      "text": "ZAPATILLAS EN OFERTA",
+      "textAlignment": "CENTER",
+      "blockClass": "cyber-strip"
+    }
+  },
+  "flex-layout.row#cm26-cyber-title-3": {
+    "props": {
+      "blockClass": ["cyber-strip", "cyber-strip-title"],
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "verticalAlign": "middle",
+      "preserveLayoutOnMobile": true
+    },
+    "children": ["rich-text#cm26-cyber-title-3"]
+  },
+  "rich-text#cm26-cyber-title-3": {
+    "props": {
+      "text": "INDUMENTARIA Y ACCESORIOS",
+      "textAlignment": "CENTER",
+      "blockClass": "cyber-strip"
+    }
+  },
+
+  /* --- SECCIÓN 1 --- */
+  "flex-layout.row#cm26-sec-1": {
+    "props": { "blockClass": "cyber-section", "preserveLayoutOnMobile": false, "colGap": 4, "fullWidth": true },
+    "children": ["flex-layout.col#cm26-sec-1-banner", "flex-layout.col#cm26-sec-1-products"]
+  },
+  "flex-layout.col#cm26-sec-1-banner": {
+    "props": { "width": "22%", "blockClass": "cyber-side" },
+    "children": ["image#cm26-side-1"]
+  },
+  "flex-layout.col#cm26-sec-1-products": {
+    "props": { "width": "78%", "blockClass": "cyber-products-col" },
+    "children": ["list-context.product-list#cm26-cyber-1"]
+  },
+  "image#cm26-side-1": {
+    "props": {
+      "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/ec26e499-233c-4125-a53f-f4cbb28ec85a___f8f78cfe140247a625c96da9d292fb72.gif",
+      "alt": "Cyber Show",
+      "link": { "url": "/cybermonday" },
+      "maxWidth": "100%",
+      "blockClass": "cyber-side-img"
+    }
+  },
+
+  /* --- SECCIÓN 2 --- */
+  "flex-layout.row#cm26-sec-2": {
+    "props": { "blockClass": "cyber-section", "preserveLayoutOnMobile": false, "colGap": 4, "fullWidth": true },
+    "children": ["flex-layout.col#cm26-sec-2-banner", "flex-layout.col#cm26-sec-2-products"]
+  },
+  "flex-layout.col#cm26-sec-2-banner": {
+    "props": { "width": "22%", "blockClass": "cyber-side" },
+    "children": ["image#cm26-side-2"]
+  },
+  "flex-layout.col#cm26-sec-2-products": {
+    "props": { "width": "78%", "blockClass": "cyber-products-col" },
+    "children": ["list-context.product-list#cm26-cyber-2"]
+  },
+  "image#cm26-side-2": {
+    "props": {
+      "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/e50cb14f-472e-4d96-8642-e716cc825a9e___4c85efb2fd94e4c4f52e30733df74302.gif",
+      "alt": "Cyber Show",
+      "link": { "url": "/cybermonday" },
+      "maxWidth": "100%",
+      "blockClass": "cyber-side-img"
+    }
+  },
+
+  /* --- 4 BANNERS DE PROMOCIONES --- */
+  "flex-layout.row#cm26-cyber-promos": {
+    "props": {
+      "blockClass": "cyber-promos",
+      "preserveLayoutOnMobile": true,
+      "colGap": 4,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#cm26-promo-1",
+      "flex-layout.col#cm26-promo-2",
+      "flex-layout.col#cm26-promo-3",
+      "flex-layout.col#cm26-promo-4"
+    ]
+  },
+  "flex-layout.col#cm26-promo-1": {
+    "props": { "width": "25%", "blockClass": "cyber-promo-col" },
+    "children": ["image#cm26-promo-1"]
+  },
+  "flex-layout.col#cm26-promo-2": {
+    "props": { "width": "25%", "blockClass": "cyber-promo-col" },
+    "children": ["image#cm26-promo-2"]
+  },
+  "flex-layout.col#cm26-promo-3": {
+    "props": { "width": "25%", "blockClass": "cyber-promo-col" },
+    "children": ["image#cm26-promo-3"]
+  },
+  "flex-layout.col#cm26-promo-4": {
+    "props": { "width": "25%", "blockClass": "cyber-promo-col" },
+    "children": ["image#cm26-promo-4"]
+  },
+  "image#cm26-promo-1": {
+    "props": {
+      "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/e287ecac-8f08-4aa7-a0e9-c4ad9a6c1ffb___f5f4149cfeebf4ac49aecff0fe7dfb55.gif",
+      "alt": "8 Cuotas Sin Interés",
+      "link": { "url": "" },
+      "maxWidth": "100%",
+      "blockClass": "cyber-promo-img"
+    }
+  },
+  "image#cm26-promo-2": {
+    "props": {
+      "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/edcccc83-3800-43d9-812b-f206281a1b8a___18b0b076690c20bdba1766de6f50f4ce.gif",
+      "alt": "Transferencias Bancarias",
+      "link": { "url": "" },
+      "maxWidth": "100%",
+      "blockClass": "cyber-promo-img"
+    }
+  },
+  "image#cm26-promo-3": {
+    "props": {
+      "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/92103c2c-711e-4ed2-ad20-9bdce3398a8f___d2a936b98c616c963ad3e0ee25e0245c.gif",
+      "alt": "20% Reintegro",
+      "link": { "url": "" },
+      "maxWidth": "100%",
+      "blockClass": "cyber-promo-img"
+    }
+  },
+  "image#cm26-promo-4": {
+    "props": {
+      "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/0068d398-5ec4-45da-9076-aebc593d30f5___aa70f264d511cb1c4193e15c1bda962b.gif",
+      "alt": "Envío Gratis",
+      "link": { "url": "" },
+      "maxWidth": "100%",
+      "blockClass": "cyber-promo-img"
+    }
+  },
+
+  /* --- FRANJA FINAL (COLECCIÓN COMPLETA) --- */
+  
+  "link#cm26-cyber-final-banners-link": {
+    "props": {
+      "href": "/544?map=productClusterIds",
+      "blockClass": "cyber-strip-final-link"
+    },
+    "children": [
+      "flex-layout.row#cm26-cyber-final-banners"
+    ]
+  },
+
+  "flex-layout.row#cm26-cyber-final-banners": {
+    "props": {
+      "blockClass": ["cyber-strip", "cyber-strip-final"],
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "verticalAlign": "middle",
+      "preserveLayoutOnMobile": true
+    },
+    "children": ["rich-text#cm26-final-banner-1"]
+  },
+  
+  "rich-text#cm26-final-banner-1": {
+    "props": {
+      "text": "¡COLECCIÓN COMPLETA!",
+      "textAlignment": "CENTER",
+      "blockClass": "cyber-strip"
+    }
+  },
+
+  /* --- SECCIÓN 3 --- */
+  "flex-layout.row#cm26-sec-3": {
+    "props": { "blockClass": "cyber-section", "preserveLayoutOnMobile": false, "colGap": 4, "fullWidth": true },
+    "children": ["flex-layout.col#cm26-sec-3-banner", "flex-layout.col#cm26-sec-3-products"]
+  },
+  "flex-layout.col#cm26-sec-3-banner": {
+    "props": { "width": "22%", "blockClass": "cyber-side" },
+    "children": ["image#cm26-side-3"]
+  },
+  "flex-layout.col#cm26-sec-3-products": {
+    "props": { "width": "78%", "blockClass": "cyber-products-col" },
+    "children": ["list-context.product-list#cm26-cyber-3"]
+  },
+  "image#cm26-side-3": {
+    "props": {
+      "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/641b7f07-b67d-4154-b88d-d2d46b3a6b38___b18b7f650b6ff5bf191fd0469c063423.gif",
+      "alt": "Cyber Show",
+      "link": { "url": "/cybermonday" },
+      "maxWidth": "100%",
+      "blockClass": "cyber-side-img"
+    }
+  },
+
+  /* --- LISTAS DE PRODUCTOS Y CARRUSEL --- */
+  "list-context.product-list#cm26-cyber-1": {
+    "blocks": ["product-summary.shelf#cm26-cyber"],
+    "props": {
+      "collection": "542",
+      "orderBy": "OrderByTopSaleDESC",
+      "hideUnavailableItems": true,
+      "maxItems": 16
+    },
+    "children": ["slider-layout#cm26-cyber-products"]
+  },
+  "list-context.product-list#cm26-cyber-2": {
+    "blocks": ["product-summary.shelf#cm26-cyber"],
+    "props": {
+      "collection": "543",
+      "orderBy": "OrderByTopSaleDESC",
+      "hideUnavailableItems": true,
+      "maxItems": 16
+    },
+    "children": ["slider-layout#cm26-cyber-products"]
+  },
+  "list-context.product-list#cm26-cyber-3": {
+    "blocks": ["product-summary.shelf#cm26-cyber"],
+    "props": {
+      "collection": "544",
+      "orderBy": "OrderByTopSaleDESC",
+      "hideUnavailableItems": true,
+      "maxItems": 16
+    },
+    "children": ["slider-layout#cm26-cyber-products"]
+  },
+
+  "slider-layout#cm26-cyber-products": {
+    "props": {
+      "itemsPerPage": { "desktop": 3, "tablet": 2, "phone": 2 },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "mobileOnly",
+      "fullWidth": false,
+      "blockClass": "cyber-products"
+    }
+  },
+
+  "product-summary.shelf#cm26-cyber": {
+    "children": [
+      "product-summary-image#cm26-cyber",
+      "product-summary-name#cm26-cyber",
+      "product-summary-price#cm26-cyber"
+    ]
+  },
+  "product-summary-image#cm26-cyber": {
+    "props": { "showBadge": true, "aspectRatio": "1:1", "maxHeight": 300 }
+  },
+  "product-summary-name#cm26-cyber": {
+    "props": { "showBrandName": true }
+  },
+  "product-summary-price#cm26-cyber": {
+    "props": { "showListPrice": true, "showLabels": false, "showInstallments": true }
+  }
+}

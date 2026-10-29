@@ -1,0 +1,28 @@
+{
+  "vendor": "showsport",
+  "name": "cybermonday",
+  "version": "0.0.4",
+  "title": "Cyber Monday",
+  "description": "Página Cyber Monday",
+  "mustUpdateAt": "2030-01-01",
+  "categories": [],
+  "dependencies": {
+    "vtex.store": "2.x",
+    "vtex.store-components": "3.x",
+    "vtex.store-image": "0.x",
+    "vtex.flex-layout": "0.x",
+    "vtex.rich-text": "0.x",
+    "vtex.slider-layout": "0.x",
+    "vtex.list-context": "0.x",
+    "vtex.responsive-layout": "0.x",
+    "vtex.product-summary": "2.x",
+    "vtex.css-handles": "0.x",
+    "vtex.store-link": "0.x"
+  },
+  "builders": {
+    "store": "0.x",
+    "styles": "2.x",
+    "react": "3.x"
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

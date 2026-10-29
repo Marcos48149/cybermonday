@@ -1,0 +1,54 @@
+/* ==========================================
+   ESTILOS DEL COUNTDOWN - SIN GLOBO BLANCO
+   ========================================== */
+.flexRow--cyber-countdown {
+  background: linear-gradient(135deg, #0a0014 0%, #1c0040 55%, #2a0a5e 100%) !important;
+  border-top: 2px solid #b026ff !important;
+  border-bottom: 2px solid #ff8a00 !important;
+  padding: 35px 16px !important;
+  width: 100% !important;
+  border-radius: 0 !important;
+}
+
+.flexRowContent--cyber-countdown {
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  justify-content: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.countdownNumber--cyber,
+:global(.vtex-countdown-2-x-countdownNumber),
+:global(.vtex-countdown-1-x-countdownNumber),
+:global(.vtex-countdown-0-x-countdownNumber) {
+  color: #ffffff !important;
+  font-size: 3.2rem !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+  text-shadow: 0 0 12px rgba(176, 38, 255, 0.9) !important;
+}
+
+.countdownTitle--cyber,
+:global(.vtex-countdown-2-x-title),
+:global(.vtex-countdown-1-x-title),
+:global(.vtex-countdown-0-x-title) {
+  color: #ffffff !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 15px !important;
+  text-align: center !important;
+  letter-spacing: 1px !important;
+}
+
+.countdownUnit--cyber,
+:global(.vtex-countdown-2-x-unit),
+:global(.vtex-countdown-1-x-unit),
+:global(.vtex-countdown-0-x-unit) {
+  color: #ff8a00 !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  margin-top: 6px !important;
+}
