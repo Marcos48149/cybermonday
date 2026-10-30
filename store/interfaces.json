@@ -1,5 +1,17 @@
 {
   "cyber-countdown": {
     "component": "Countdown"
+  },
+  "cyber-product-list": {
+    "component": "CyberProductList",
+    "allowed": ["product-summary"],
+    "composition": "children",
+    "preview": {
+      "type": "grid",
+      "height": 550
+    },
+    "content": {
+      "$ref": "app:showsport.cybermonday#/definitions/CyberProductList"
+    }
   }
 }

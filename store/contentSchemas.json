@@ -1,0 +1,54 @@
+{
+  "definitions": {
+    "CyberProductList": {
+      "title": "Carrusel de productos",
+      "type": "object",
+      "properties": {
+        "collection": {
+          "title": "Colección (ID)",
+          "description": "ID de la colección que se muestra en el carrusel",
+          "type": "string",
+          "isLayout": false
+        },
+        "orderBy": {
+          "title": "Ordenamiento",
+          "type": "string",
+          "enum": [
+            "",
+            "OrderByTopSaleDESC",
+            "OrderByPriceDESC",
+            "OrderByPriceASC",
+            "OrderByNameASC",
+            "OrderByNameDESC",
+            "OrderByReleaseDateDESC",
+            "OrderByBestDiscountDESC"
+          ],
+          "enumNames": [
+            "Relevancia",
+            "Más vendidos",
+            "Mayor precio",
+            "Menor precio",
+            "Nombre A-Z",
+            "Nombre Z-A",
+            "Más recientes",
+            "Mejor descuento"
+          ],
+          "default": "OrderByTopSaleDESC",
+          "isLayout": false
+        },
+        "hideUnavailableItems": {
+          "title": "Ocultar productos sin stock",
+          "type": "boolean",
+          "default": true,
+          "isLayout": false
+        },
+        "maxItems": {
+          "title": "Cantidad máxima de productos",
+          "type": "number",
+          "default": 16,
+          "isLayout": false
+        }
+      }
+    }
+  }
+}

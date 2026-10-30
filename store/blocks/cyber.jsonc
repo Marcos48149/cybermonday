@@ -1,5 +1,5 @@
 {
-  "store.custom#cm26-cybermonday2": {
+  "store.custom#cm26-cybermonday4": {
     "blocks": ["flex-layout.row#cm26-cyber-page"]
   },
 
@@ -128,6 +128,7 @@
   "image#cm26-brand-1": {
     "props": {
       "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/1921c09a-cfa5-4bbc-8ea3-80561442e680___5daff515be46150a097eaffbba25fc38.gif",
+      "mobileImage": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/1921c09a-cfa5-4bbc-8ea3-80561442e680___5daff515be46150a097eaffbba25fc38.gif",
       "alt": "FILA",
       "link": { "url": "" },
       "maxWidth": "100%",
@@ -137,6 +138,7 @@
   "image#cm26-brand-2": {
     "props": {
       "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/732f1ab1-beff-47a2-92ef-46cccd56b166___29e7df461bd9b2111fe249088b6e6038.gif",
+      "mobileImage": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/732f1ab1-beff-47a2-92ef-46cccd56b166___29e7df461bd9b2111fe249088b6e6038.gif",
       "alt": "ON",
       "link": { "url": "" },
       "maxWidth": "100%",
@@ -146,6 +148,7 @@
   "image#cm26-brand-3": {
     "props": {
       "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/4fddac44-e913-4767-962c-091c50613440___19f69a2c10c3bad42f52502f196c79c6.gif",
+      "mobileImage": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/4fddac44-e913-4767-962c-091c50613440___19f69a2c10c3bad42f52502f196c79c6.gif",
       "alt": "TOPPER",
       "link": { "url": "" },
       "maxWidth": "100%",
@@ -161,15 +164,19 @@
     "props": {
       "height": 100,
       "images": [
-        { "image": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/6ae7f218-8ce5-4f46-ac5f-aba1e3658de7___0bf673972e8422d32bc179ecfe5626b0.png", "description": "Promo Cyber Monday 1" },
-        { "image": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/262739f3-ec9f-4efa-9d88-cf955be2ad7c___6cfd5243b4fcac4c58001e0ef75e9a8b.png", "description": "Promo Cyber Monday 2" }
+        { "image": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/6ae7f218-8ce5-4f46-ac5f-aba1e3658de7___0bf673972e8422d32bc179ecfe5626b0.png", "mobileImage": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/6ae7f218-8ce5-4f46-ac5f-aba1e3658de7___0bf673972e8422d32bc179ecfe5626b0.png", "description": "Promo Cyber Monday 1" },
+        { "image": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/262739f3-ec9f-4efa-9d88-cf955be2ad7c___6cfd5243b4fcac4c58001e0ef75e9a8b.png", "mobileImage": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/262739f3-ec9f-4efa-9d88-cf955be2ad7c___6cfd5243b4fcac4c58001e0ef75e9a8b.png", "description": "Promo Cyber Monday 2" }
       ]
     }
   },
   "slider-layout#cm26-cyber-promo-carousel": {
     "props": {
       "itemsPerPage": { "desktop": 1, "tablet": 1, "phone": 1 },
-      "infinite": true
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "none",
+      "autoplay": true,
+      "autoplaySpeed": 4000
     }
   },
 
@@ -237,11 +244,12 @@
   },
   "flex-layout.col#cm26-sec-1-products": {
     "props": { "width": "78%", "blockClass": "cyber-products-col" },
-    "children": ["list-context.product-list#cm26-cyber-1"]
+    "children": ["cyber-product-list#cm26-cyber-1"]
   },
   "image#cm26-side-1": {
     "props": {
       "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/ec26e499-233c-4125-a53f-f4cbb28ec85a___f8f78cfe140247a625c96da9d292fb72.gif",
+      "mobileImage": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/ec26e499-233c-4125-a53f-f4cbb28ec85a___f8f78cfe140247a625c96da9d292fb72.gif",
       "alt": "Cyber Show",
       "link": { "url": "/cybermonday" },
       "maxWidth": "100%",
@@ -260,11 +268,12 @@
   },
   "flex-layout.col#cm26-sec-2-products": {
     "props": { "width": "78%", "blockClass": "cyber-products-col" },
-    "children": ["list-context.product-list#cm26-cyber-2"]
+    "children": ["cyber-product-list#cm26-cyber-2"]
   },
   "image#cm26-side-2": {
     "props": {
       "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/e50cb14f-472e-4d96-8642-e716cc825a9e___4c85efb2fd94e4c4f52e30733df74302.gif",
+      "mobileImage": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/e50cb14f-472e-4d96-8642-e716cc825a9e___4c85efb2fd94e4c4f52e30733df74302.gif",
       "alt": "Cyber Show",
       "link": { "url": "/cybermonday" },
       "maxWidth": "100%",
@@ -306,6 +315,7 @@
   "image#cm26-promo-1": {
     "props": {
       "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/e287ecac-8f08-4aa7-a0e9-c4ad9a6c1ffb___f5f4149cfeebf4ac49aecff0fe7dfb55.gif",
+      "mobileImage": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/e287ecac-8f08-4aa7-a0e9-c4ad9a6c1ffb___f5f4149cfeebf4ac49aecff0fe7dfb55.gif",
       "alt": "8 Cuotas Sin Interés",
       "link": { "url": "" },
       "maxWidth": "100%",
@@ -315,6 +325,7 @@
   "image#cm26-promo-2": {
     "props": {
       "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/edcccc83-3800-43d9-812b-f206281a1b8a___18b0b076690c20bdba1766de6f50f4ce.gif",
+      "mobileImage": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/edcccc83-3800-43d9-812b-f206281a1b8a___18b0b076690c20bdba1766de6f50f4ce.gif",
       "alt": "Transferencias Bancarias",
       "link": { "url": "" },
       "maxWidth": "100%",
@@ -324,6 +335,7 @@
   "image#cm26-promo-3": {
     "props": {
       "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/92103c2c-711e-4ed2-ad20-9bdce3398a8f___d2a936b98c616c963ad3e0ee25e0245c.gif",
+      "mobileImage": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/92103c2c-711e-4ed2-ad20-9bdce3398a8f___d2a936b98c616c963ad3e0ee25e0245c.gif",
       "alt": "20% Reintegro",
       "link": { "url": "" },
       "maxWidth": "100%",
@@ -333,6 +345,7 @@
   "image#cm26-promo-4": {
     "props": {
       "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/0068d398-5ec4-45da-9076-aebc593d30f5___aa70f264d511cb1c4193e15c1bda962b.gif",
+      "mobileImage": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/0068d398-5ec4-45da-9076-aebc593d30f5___aa70f264d511cb1c4193e15c1bda962b.gif",
       "alt": "Envío Gratis",
       "link": { "url": "" },
       "maxWidth": "100%",
@@ -382,11 +395,12 @@
   },
   "flex-layout.col#cm26-sec-3-products": {
     "props": { "width": "78%", "blockClass": "cyber-products-col" },
-    "children": ["list-context.product-list#cm26-cyber-3"]
+    "children": ["cyber-product-list#cm26-cyber-3"]
   },
   "image#cm26-side-3": {
     "props": {
       "src": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/641b7f07-b67d-4154-b88d-d2d46b3a6b38___b18b7f650b6ff5bf191fd0469c063423.gif",
+      "mobileImage": "https://showsport.vtexassets.com/assets/vtex.file-manager-graphql/images/641b7f07-b67d-4154-b88d-d2d46b3a6b38___b18b7f650b6ff5bf191fd0469c063423.gif",
       "alt": "Cyber Show",
       "link": { "url": "/cybermonday" },
       "maxWidth": "100%",
@@ -395,7 +409,7 @@
   },
 
   /* --- LISTAS DE PRODUCTOS Y CARRUSEL --- */
-  "list-context.product-list#cm26-cyber-1": {
+  "cyber-product-list#cm26-cyber-1": {
     "blocks": ["product-summary.shelf#cm26-cyber"],
     "props": {
       "collection": "542",
@@ -405,7 +419,7 @@
     },
     "children": ["slider-layout#cm26-cyber-products"]
   },
-  "list-context.product-list#cm26-cyber-2": {
+  "cyber-product-list#cm26-cyber-2": {
     "blocks": ["product-summary.shelf#cm26-cyber"],
     "props": {
       "collection": "543",
@@ -415,7 +429,7 @@
     },
     "children": ["slider-layout#cm26-cyber-products"]
   },
-  "list-context.product-list#cm26-cyber-3": {
+  "cyber-product-list#cm26-cyber-3": {
     "blocks": ["product-summary.shelf#cm26-cyber"],
     "props": {
       "collection": "544",
