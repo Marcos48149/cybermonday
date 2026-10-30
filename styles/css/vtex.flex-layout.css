@@ -49,22 +49,8 @@
   justify-content: center;
 }
 
-/* Imagen de cada marca - altura fija uniforme */
-.imageElement--cyber-brand {
-  display: block !important;
-  width: 100% !important;
-  height: 200px !important;
-  max-height: 200px !important;
-  object-fit: cover !important;
-  object-position: center !important;
-  margin: 0 auto !important;
-}
-
-/* TOPPER específicamente - misma altura */
-.imageElement--cyber-brand-topper {
-  height: 200px !important;
-  max-height: 200px !important;
-}
+/* Los estilos de las imagenes viven en vtex.store-components.css
+   (el bloque `image` se renderiza desde esa app). */
 
 /* ==========================================
    MOBILE
@@ -72,22 +58,14 @@
 
 @media screen and (max-width: 768px) {
   .flexRow--cyber-brands {
-    margin-top: 24px !important;
+    padding-top: 24px !important;
+    margin-top: 0 !important;
+    margin-bottom: 24px !important;
   }
 
   .flexCol--cyber-brand-col {
     height: 120px;
     min-height: 120px;
-  }
-
-  .imageElement--cyber-brand {
-    height: 100px !important;
-    max-height: 100px !important;
-  }
-
-  .imageElement--cyber-brand-topper {
-    height: 100px !important;
-    max-height: 100px !important;
   }
 }
 
@@ -139,10 +117,6 @@
     padding: 22px 12px;
   }
 
-  .flexRow--cyber-brands {
-    margin-top: 24px !important;
-  }
-
   .flexRow--cyber-strip-title {
     margin-top: 24px !important;
     margin-bottom: 14px !important;
@@ -150,5 +124,51 @@
 
   .flexRow--cyber-strip-final {
     margin-top: 24px !important;
+  }
+}
+
+/* ==========================================
+   SECCIONES (BANNER LATERAL + CARRUSEL DE PRODUCTOS)
+   ========================================== */
+
+/* Evita que el slider desborde su columna */
+.flexCol--cyber-products-col {
+  min-width: 0;
+}
+
+@media screen and (max-width: 768px) {
+  /* Las secciones apilan sus columnas: el carrusel ocupa el 100% */
+  .flexCol--cyber-products-col {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+  }
+
+  /* El banner lateral ocupa el ancho completo de la pantalla (full-bleed).
+     OJO: en mobile la fila es flex-direction: column, por eso NO se usa
+     flex-basis aca (en columna esa propiedad controla el alto). */
+  .flexCol--cyber-side {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    flex: 0 0 auto !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+  }
+
+  .flexRowContent--cyber-section {
+    gap: 10px 0 !important;
+  }
+
+  /* 4 banners de promociones -> grilla 2x2 en mobile */
+  .flexRowContent--cyber-promos {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  .flexCol--cyber-promo-col {
+    width: calc(50% - 4px) !important;
+    max-width: calc(50% - 4px) !important;
+    flex-basis: calc(50% - 4px) !important;
   }
 }

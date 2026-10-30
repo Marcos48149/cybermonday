@@ -1,0 +1,78 @@
+/* ==========================================
+   IMÁGENES
+   El bloque `image` se renderiza con clases de vtex.store-components
+   (vtex-store-components-3-x-imageElement...). Por eso este archivo
+   debe llamarse vtex.store-components.css: cualquier regla de imagen
+   puesta en otro .css del tema NO se aplica.
+   ========================================== */
+
+/* --- Banners de marca (FILA / ON / TOPPER) --- */
+.imageElement--cyber-brand {
+  display: block !important;
+  width: 100% !important;
+  height: 200px !important;
+  max-height: 200px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  margin: 0 auto !important;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(176, 38, 255, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.imageElement--cyber-brand:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(255, 138, 0, 0.5);
+}
+
+.imageElement--cyber-brand-topper {
+  height: 200px !important;
+  max-height: 200px !important;
+}
+
+/* --- Banner lateral de las secciones --- */
+.imageElement--cyber-side-img {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Banners de promociones --- */
+.imageElement--cyber-promo-img {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto;
+  border-radius: 14px;
+}
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+@media screen and (max-width: 768px) {
+  .imageElement--cyber-brand,
+  .imageElement--cyber-brand-topper {
+    height: 100px !important;
+    max-height: 100px !important;
+  }
+
+  /* El banner lateral ocupa el ancho completo (full-bleed).
+     El 100vw lo resuelve .flexCol--cyber-side en vtex.flex-layout.css. */
+  .imageElement--cyber-side-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 140px !important;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .imageElement--cyber-promo-img {
+    border-radius: 10px;
+  }
+}
