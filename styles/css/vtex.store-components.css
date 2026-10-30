@@ -10,8 +10,8 @@
 .imageElement--cyber-brand {
   display: block !important;
   width: 100% !important;
-  height: 200px !important;
-  max-height: 200px !important;
+  height: 240px !important;
+  max-height: 240px !important;
   object-fit: cover !important;
   object-position: center !important;
   margin: 0 auto !important;
@@ -26,8 +26,8 @@
 }
 
 .imageElement--cyber-brand-topper {
-  height: 200px !important;
-  max-height: 200px !important;
+  height: 240px !important;
+  max-height: 240px !important;
 }
 
 /* --- Banner lateral de las secciones --- */
@@ -54,10 +54,12 @@
    MOBILE
    ========================================== */
 @media screen and (max-width: 768px) {
+  /* Banners de marca mas altos: en 100px los textos del banner
+     quedaban ilegibles al recortarse con object-fit: cover. */
   .imageElement--cyber-brand,
   .imageElement--cyber-brand-topper {
-    height: 100px !important;
-    max-height: 100px !important;
+    height: 140px !important;
+    max-height: 140px !important;
   }
 
   /* El banner lateral ocupa el ancho completo (full-bleed).
@@ -74,5 +76,32 @@
 
   .imageElement--cyber-promo-img {
     border-radius: 10px;
+  }
+
+  .imageElement--cyber-brand,
+  .imageElement--cyber-brand-topper {
+    display: none !important;
+  }
+}
+
+/* ----- BANNER HERO CON DOS IMÁGENES ----- */
+/* Clase base – sustituí NOMBRE_DE_CLASE por la que hallaste */
+.NOMBRE_DE_CLASE {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Desktop: a partir de 1024px cargá la imagen grande */
+@media (min-width: 1024px) {
+  .NOMBRE_DE_CLASE {
+    background-image: url('https://tu-cdn-o-ruta/hero-desktop.jpg');
+  }
+}
+
+/* Mobile: hasta 768px cargá la imagen reducida */
+@media (max-width: 768px) {
+  .NOMBRE_DE_CLASE {
+    background-image: url('https://tu-cdn-o-ruta/hero-mobile.jpg');
   }
 }

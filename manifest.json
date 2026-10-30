@@ -1,7 +1,7 @@
 {
   "vendor": "showsport",
   "name": "cybermonday",
-  "version": "0.0.8",
+  "version": "0.0.12",
   "title": "Cyber Monday",
   "description": "Página Cyber Monday",
   "mustUpdateAt": "2030-01-01",
@@ -16,7 +16,6 @@
     "vtex.list-context": "0.x",
     "vtex.responsive-layout": "0.x",
     "vtex.product-summary": "2.x",
-    "vtex.product-price": "1.x",
     "vtex.css-handles": "0.x",
     "vtex.store-link": "0.x"
   },

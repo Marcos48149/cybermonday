@@ -1,12 +1,20 @@
 /* ==========================================
    CARRUSEL DE PRODUCTOS — CARD
-   El bloque es product-summary.shelf#cm26-cyber (sin blockClass),
-   por eso los handles van sin sufijo y estos estilos son SOLO mobile.
+   product-summary.shelf#cm26-cyber NO declara blockClass, por lo que sus
+   handles van SIN sufijo (vtex-product-summary-2-x-element) y sin scope
+   las reglas afectarian a TODAS las cards del sitio.
+   Por eso cada regla se ancla a un ancestro que solo existe en esta pagina:
+     - flexRow--cyber-page        (blockClass del row raiz)
+     - sliderLayoutContainer--cyber-products (blockClass del slider)
+   Si alguno de los dos no existe en el DOM, la regla no aplica (fallback
+   inofensivo: la card queda con el estilo por defecto).
+   Solo mobile.
    ========================================== */
 
 @media screen and (max-width: 768px) {
   /* --- Tarjeta --- */
-  .element {
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) .element,
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) .element {
     position: relative;
     background: #ffffff;
     border-radius: 14px;
@@ -18,20 +26,25 @@
   }
 
   /* --- Imagen --- */
-  .imageWrapper {
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) .imageWrapper,
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) .imageWrapper {
     width: 100% !important;
     margin-bottom: 8px;
   }
 
-  .imageContainer,
-  .imageStackContainer {
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) .imageContainer,
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) .imageStackContainer,
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) .imageContainer,
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) .imageStackContainer {
     width: 100% !important;
     height: auto !important;
     padding: 0 !important;
   }
 
-  .image,
-  .imageNormal {
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) .image,
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) .imageNormal,
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) .image,
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) .imageNormal {
     display: block !important;
     width: 100% !important;
     height: auto !important;
@@ -41,19 +54,23 @@
   }
 
   /* --- Nombre --- */
-  .nameContainer {
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) .nameContainer,
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) .nameContainer {
     padding: 8px 0 6px !important;
     justify-content: center !important;
     align-items: flex-start !important;
     min-height: 44px;
   }
 
-  .productNameContainer,
-  .nameWrapper {
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) .productNameContainer,
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) .nameWrapper,
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) .productNameContainer,
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) .nameWrapper {
     width: 100% !important;
   }
 
-  .nameWrapper {
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) .nameWrapper,
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) .nameWrapper {
     display: -webkit-box !important;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -67,11 +84,75 @@
     text-align: center !important;
   }
 
-  .productBrand,
-  .brandName {
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) .productBrand,
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) .brandName,
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) .productBrand,
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) .brandName {
     font-size: 13px !important;
     line-height: 1.4 !important;
     font-weight: 600 !important;
     color: #1a1a1a !important;
+  }
+
+  /* ==========================================
+     PRECIOS
+     Los renderiza vtex.product-price, que no figura en las dependencias
+     de esta app. Se apuntan con :global(), que es la forma documentada
+     de estilar clases de otra app. Tambien van anclados a la pagina.
+     ========================================== */
+
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) :global(.vtex-product-price-1-x-sellingPrice),
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) :global(.vtex-product-price-1-x-sellingPrice) {
+    display: block !important;
+    font-size: 20px !important;
+    line-height: 1.15 !important;
+    font-weight: 800 !important;
+    color: #111111 !important;
+    letter-spacing: -0.2px;
+  }
+
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) :global(.vtex-product-price-1-x-sellingPriceValue),
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) :global(.vtex-product-price-1-x-sellingPriceValue) {
+    font-size: inherit !important;
+    font-weight: inherit !important;
+  }
+
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) :global(.vtex-product-price-1-x-listPrice),
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) :global(.vtex-product-price-1-x-listPrice) {
+    display: inline-block !important;
+    font-size: 12.5px !important;
+    line-height: 1.2 !important;
+    color: #8a8a8a !important;
+    margin-left: 6px;
+  }
+
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) :global(.vtex-product-price-1-x-listPriceValue),
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) :global(.vtex-product-price-1-x-listPriceValue) {
+    font-size: inherit !important;
+    color: inherit !important;
+  }
+
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) :global(.vtex-product-price-1-x-installments),
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) :global(.vtex-product-price-1-x-installments) {
+    display: block !important;
+    font-size: 11.5px !important;
+    line-height: 1.3 !important;
+    color: #555555 !important;
+    margin-top: 2px;
+  }
+
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) :global(.vtex-product-price-1-x-installmentsNumber),
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) :global(.vtex-product-price-1-x-installmentValue),
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) :global(.vtex-product-price-1-x-installmentsNumber),
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) :global(.vtex-product-price-1-x-installmentValue) {
+    font-weight: 700 !important;
+    color: #111111 !important;
+  }
+
+  :global(.vtex-flex-layout-0-x-flexRow--cyber-page) :global(.vtex-product-price-1-x-currencyContainer),
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--cyber-products) :global(.vtex-product-price-1-x-currencyContainer) {
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    color: inherit !important;
   }
 }
