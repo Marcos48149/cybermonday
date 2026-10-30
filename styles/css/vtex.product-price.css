@@ -1,0 +1,59 @@
+/* ==========================================
+   PRECIOS DE LA CARD — SOLO mobile
+   Los handles vienen de vtex.product-price (app distinta a product-summary),
+   por eso viven en este archivo y la app figura en manifest.dependencies.
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+  /* Precio de venta: protagonista */
+  .sellingPrice {
+    display: block !important;
+    font-size: 20px !important;
+    line-height: 1.15 !important;
+    font-weight: 800 !important;
+    color: #111111 !important;
+    letter-spacing: -0.2px;
+    margin-top: 2px;
+  }
+
+  .sellingPriceValue {
+    font-size: inherit !important;
+    font-weight: inherit !important;
+  }
+
+  /* Precio de lista: tachado, secundario */
+  .listPrice {
+    display: inline-block !important;
+    font-size: 12.5px !important;
+    line-height: 1.2 !important;
+    color: #8a8a8a !important;
+    margin-left: 6px;
+  }
+
+  .listPriceValue {
+    font-size: inherit !important;
+    color: inherit !important;
+  }
+
+  /* Cuotas */
+  .installments {
+    display: block !important;
+    font-size: 11.5px !important;
+    line-height: 1.3 !important;
+    color: #555555 !important;
+    margin-top: 2px;
+  }
+
+  .installmentsNumber,
+  .installmentValue {
+    font-weight: 700 !important;
+    color: #111111 !important;
+  }
+
+  /* Contenedores de moneda: heredan del precio para no romper el formato */
+  .currencyContainer {
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    color: inherit !important;
+  }
+}

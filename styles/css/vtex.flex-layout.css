@@ -137,38 +137,49 @@
 }
 
 @media screen and (max-width: 768px) {
-  /* Las secciones apilan sus columnas: el carrusel ocupa el 100% */
-  .flexCol--cyber-products-col {
-    width: 100% !important;
-    max-width: 100% !important;
-    flex: 0 0 auto !important;
-    min-width: 0 !important;
-  }
+  /* OJO: en una flex-layout.row el ancho de cada columna NO vive en
+     .flexCol--<blockClass>. Vive en el wrapper hijo, que trae
+     `stretchChildrenWidth` + `width` INLINE. Por eso hay que pisar el wrapper.
+     (VTEX bloquea `>` y selectores de tipo, pero permite el combinador
+     de espacio y :first-child.) */
 
-  /* El banner lateral ocupa el ancho completo de la pantalla (full-bleed).
-     OJO: en mobile la fila es flex-direction: column, por eso NO se usa
-     flex-basis aca (en columna esa propiedad controla el alto). */
-  .flexCol--cyber-side {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    flex: 0 0 auto !important;
-    margin-left: calc(50% - 50vw) !important;
-    margin-right: calc(50% - 50vw) !important;
-  }
-
+  /* --- Secciones: banner arriba, carrusel abajo --- */
   .flexRowContent--cyber-section {
     gap: 10px 0 !important;
   }
 
-  /* 4 banners de promociones -> grilla 2x2 en mobile */
+  .flexRowContent--cyber-section .stretchChildrenWidth {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* El primer wrapper es el banner lateral -> full-bleed (borde a borde) */
+  .flexRowContent--cyber-section .stretchChildrenWidth:first-child {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+  }
+
+  /* --- 4 banners de promociones -> grilla 2x2 --- */
+  /* Aire arriba: se usa padding (no margin) porque en flex-layout el
+     margin-top del flexRow colapsa y no se ve. */
+  .flexRow--cyber-promos {
+    padding-top: 28px;
+  }
+
   .flexRowContent--cyber-promos {
     flex-wrap: wrap !important;
     gap: 8px !important;
   }
 
-  .flexCol--cyber-promo-col {
+  .flexRowContent--cyber-promos .stretchChildrenWidth {
     width: calc(50% - 4px) !important;
     max-width: calc(50% - 4px) !important;
-    flex-basis: calc(50% - 4px) !important;
+    flex: 0 0 auto !important;
+    padding-right: 0 !important;
   }
 }

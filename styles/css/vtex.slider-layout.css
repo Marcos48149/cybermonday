@@ -1,0 +1,34 @@
+/* ==========================================
+   CARRUSELES DE PRODUCTOS — SOLO mobile
+   blockClass del slider: cyber-products
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+  /* Separación entre tarjetas (gutter) */
+  .slide--cyber-products {
+    padding: 0 4px;
+    box-sizing: border-box;
+  }
+
+  .slideChildrenContainer--cyber-products {
+    padding: 0;
+  }
+
+  /* El carrusel sangra contra los bordes: recupera el aire del gutter */
+  .sliderLayoutContainer--cyber-products {
+    padding-left: 4px;
+    padding-right: 4px;
+    box-sizing: border-box;
+  }
+
+  /* Puntitos de paginación más discretos */
+  .paginationDotsContainer--cyber-products {
+    margin-top: 10px;
+  }
+
+  .paginationDot--cyber-products {
+    width: 7px;
+    height: 7px;
+    margin: 0 3px;
+  }
+}
